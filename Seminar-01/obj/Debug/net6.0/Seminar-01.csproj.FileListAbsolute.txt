@@ -1,0 +1,15 @@
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/Seminar-01.csproj.AssemblyReference.cache
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/Seminar-01.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/Seminar-01.AssemblyInfoInputs.cache
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/Seminar-01.AssemblyInfo.cs
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/Seminar-01.csproj.CoreCompileInputs.cache
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/Seminar-01.dll
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/refint/Seminar-01.dll
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/Seminar-01.pdb
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/bin/Debug/net6.0/Seminar-01
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/bin/Debug/net6.0/Seminar-01.deps.json
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/bin/Debug/net6.0/Seminar-01.runtimeconfig.json
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/bin/Debug/net6.0/Seminar-01.dll
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/bin/Debug/net6.0/Seminar-01.pdb
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/Seminar-01.genruntimeconfig.cache
+/Users/dmitrijnikolaev/Developer/C#/Seminar-01/obj/Debug/net6.0/ref/Seminar-01.dll
