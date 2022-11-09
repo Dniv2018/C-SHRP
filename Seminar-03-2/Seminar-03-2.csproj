@@ -6,6 +6,7 @@
     <RootNamespace>Seminar_03_2</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <_EnableMacOSCodeSign>false</_EnableMacOSCodeSign>
   </PropertyGroup>
 
 </Project>
