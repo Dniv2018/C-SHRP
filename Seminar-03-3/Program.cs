@@ -43,19 +43,8 @@ void PrintMultCoupleDigits(int[] array)
     }
     Console.WriteLine("\n");
 }
-// Console.Write("[ " + string.Join(", ", array_37) +" ] -> ");
-// for (int i = 0; i <= array_37.Length / 2; i++)
-// {
-//     if (i != array_37.Length / 2)
-//     {
-//         Console.Write(array_37[i] * array_37[array_37.Length - 1 - i] + " ");
-//     }
-//     else
-//     {
-//         Console.Write(array_37[i]);
-//     }
-// }
-// Console.WriteLine("\n");
+
+
 
 
 // Methods
