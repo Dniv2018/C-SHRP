@@ -1,2 +1,58 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿// Решение в группах задач:
+// Задача 40: Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины.
+// Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.
+Console.WriteLine();
+Console.WriteLine("Урок 6. Двумерные массивы и рекурсия.");
+Console.WriteLine();
+Console.WriteLine("Задача 40. Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины. Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.");
+
+int[] len = { 10, 5, 20 };
+Console.WriteLine("[ " + string.Join(", ", len) + " ] -> " + CheckTriangle());
+
+
+
+// Задача 42: Напишите программу, которая будет преобразовывать десятичное число в двоичное.
+// 45 -> 101101
+// 3  -> 11
+// 2  -> 10
+Console.WriteLine();
+Console.WriteLine("Задача 35. Задайте одномерный массив из 123 случайных чисел. Найдите количество двухзначных элементов массива.");
+
+
+
+// Methods:
+bool CheckTriangle()
+{
+    bool count;
+    int i = 0;
+    do
+    {
+        i++;
+        if (len[0] >= len[1] + len[2])
+        {
+            count = false;
+        }
+        else
+        {
+            count = true;
+        }
+        Rotaite();
+        // Console.WriteLine("[ " + string.Join(", ", len) + " ] -> " + count + " i: " + i);
+    }
+    while (i <= 3 && count);
+    return count;
+}
+
+void Rotaite()
+{
+    int temp;
+    for (int i = 0; i < 2; i++)
+    {
+        temp = len[i];
+        len[i] = len[i + 1];
+        len[i + 1] = temp;
+    }
+}
+
+
+
