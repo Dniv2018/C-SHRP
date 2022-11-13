@@ -6,8 +6,8 @@ Console.WriteLine("Урок 6. Двумерные массивы и рекурс
 Console.WriteLine();
 Console.WriteLine("Задача 40. Напишите программу, которая принимает на вход три числа и проверяет, может ли существовать треугольник с сторонами такой длины. Теорема о неравенстве треугольника: каждая сторона треугольника меньше суммы двух других сторон.");
 
-int[] len = { 10, 5, 20 };
-Console.WriteLine("[ " + string.Join(", ", len) + " ] -> " + CheckTriangle());
+int[] len = { 10, 5, 11 };
+Console.WriteLine("[ " + string.Join(", ", len) + " ] -> " + CheckTriangle(len));
 
 
 
@@ -16,19 +16,28 @@ Console.WriteLine("[ " + string.Join(", ", len) + " ] -> " + CheckTriangle());
 // 3  -> 11
 // 2  -> 10
 Console.WriteLine();
-Console.WriteLine("Задача 35. Задайте одномерный массив из 123 случайных чисел. Найдите количество двухзначных элементов массива.");
-
+Console.WriteLine("Задача 42. Напишите программу, которая будет преобразовывать десятичное число в двоичное.");
+string result = "";
+Console.WriteLine("Decimal: 45 -> " + GetBynaryFromDecimal(45, result));
+string GetBynaryFromDecimal(int dec, string res)
+{
+    if (dec / 2 > 0) return GetBynaryFromDecimal(dec / 2, res);
+    else return dec % 2 + res;
+    // if (dec / 2 == 0) return dec % 2 + res;
+    // else GetBynaryFromDecimal(dec / 2, res);
+    // return res;
+}
 
 
 // Methods:
-bool CheckTriangle()
+bool CheckTriangle(int[] array)
 {
     bool count;
     int i = 0;
     do
     {
         i++;
-        if (len[0] >= len[1] + len[2])
+        if (array[0] >= array[1] + array[2])
         {
             count = false;
         }
@@ -36,21 +45,21 @@ bool CheckTriangle()
         {
             count = true;
         }
-        Rotaite();
+        Rotaite(array);
         // Console.WriteLine("[ " + string.Join(", ", len) + " ] -> " + count + " i: " + i);
     }
     while (i <= 3 && count);
     return count;
 }
 
-void Rotaite()
+void Rotaite(int[] array)
 {
     int temp;
-    for (int i = 0; i < 2; i++)
+    for (int i = 0; i < array.Length - 1; i++)
     {
-        temp = len[i];
-        len[i] = len[i + 1];
-        len[i + 1] = temp;
+        temp = array[i];
+        array[i] = array[i + 1];
+        array[i + 1] = temp;
     }
 }
 
