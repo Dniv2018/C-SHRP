@@ -19,7 +19,7 @@ Console.WriteLine();
 Console.WriteLine("Задача 42. Напишите программу, которая будет преобразовывать десятичное число в двоичное.");
 string result = "";
 int DEC = 46;
-// GetBynaryFromDecimal(DEC);
+
 Console.WriteLine($"Decimal: {DEC} -> " + GetBynaryFromDecimal(DEC));
 
 // Урок 6. Двумерные массивы и рекурсия
@@ -34,7 +34,6 @@ Console.WriteLine("Задача 41. Пользователь вводит с к�
 string[] subs = GetStr("Enter the numbers in one line separated by a space.");
 
 
-// string[] subs = str.Split(' ');
 int[] num = new int[subs.Length];
 
 for (int i = 0; i < subs.Length; i++)
@@ -76,13 +75,11 @@ else
 
 
 // Дополнительно. Дан массив. Найдите MEX массива. MEX (Minimum EXcluded) - минимальный отсутствующий элемент.
-// Console.WriteLine();
-// Console.WriteLine("49%100: " + 49 % 100);
+
 Console.WriteLine();
 Console.WriteLine("Дополнительно. Дан массив. Найдите MEX массива. MEX (Minimum EXcluded) - минимальный отсутствующий элемент.");
 int[] array = { -1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-// var rnd = new Random();
-// int input_value = rnd.Next(100, 1000);
+
 Console.Write("[ " + string.Join(", ", array) + " ] -> ");
 
 bool[] checkArray = new bool[array.Length];
