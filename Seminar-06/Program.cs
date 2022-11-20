@@ -30,18 +30,12 @@ Console.WriteLine();
 Console.WriteLine("Урок 6. Двумерные массивы и рекурсия.");
 Console.WriteLine();
 Console.WriteLine("Задача 41. Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.");
-// Console.WriteLine("Enter the numbers in one line separated by a space.");
-string str;
-do
-{
-    Console.WriteLine("Enter the numbers in one line separated by a space.");
-    str = Console.ReadLine()!;
-} while (String.IsNullOrWhiteSpace(str));
-// Console.WriteLine("Enter the numbers in one line separated by a space.");
-// string str = Console.ReadLine()!;
-str = str.Trim();
-string[] subs = str.Split(' ');
-int[] num = new int[str.Length];
+
+string[] subs = GetStr("Enter the numbers in one line separated by a space.");
+
+
+// string[] subs = str.Split(' ');
+int[] num = new int[subs.Length];
 
 for (int i = 0; i < subs.Length; i++)
 {
@@ -61,12 +55,87 @@ Console.WriteLine($"You entered {count} numbers greater than 0");
 
 // Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
 // b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+Console.WriteLine();
+Console.WriteLine("Задача 43. Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.");
+
+float[] formula = GetFormula();
+
+if (formula[0] == formula[2])
+{
+    if (formula[1] == formula[3])
+    {
+        Console.WriteLine("Straight lines match.");
+    }
+    else Console.WriteLine("Straight lines don't intersect.");
+}
+else
+{
+    float x = (formula[3] - formula[1]) / (formula[0] - formula[2]);
+    Console.WriteLine($"Intersection point. X: {x} Y: {formula[0] * x + formula[1]}.");
+}
+
 
 // Дополнительно. Дан массив. Найдите MEX массива. MEX (Minimum EXcluded) - минимальный отсутствующий элемент.
+// Console.WriteLine();
+// Console.WriteLine("49%100: " + 49 % 100);
+Console.WriteLine();
+Console.WriteLine("Дополнительно. Дан массив. Найдите MEX массива. MEX (Minimum EXcluded) - минимальный отсутствующий элемент.");
+int[] array = { -1, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+// var rnd = new Random();
+// int input_value = rnd.Next(100, 1000);
+Console.Write("[ " + string.Join(", ", array) + " ] -> ");
+
+bool[] checkArray = new bool[array.Length];
+for (int i = 0; i < array.Length; i++)
+{
+    if (array[i] >= 0 & array[i] < array.Length)
+        checkArray[array[i]] = true;
+}
+count = -1;
+for (int i = 0; i < checkArray.Length; i++)
+{
+    if (!checkArray[i])
+    {
+        Console.WriteLine("MEX: " + i);
+        count++;
+        break;
+    }
+}
+if (count == -1) Console.WriteLine("MEX: " + array.Length);
+
 
 
 
 // Methods:
+float[] GetFormula()
+{
+    float[] formula = new float[4];
+    for (int i = 0; i <= 2;)
+    {
+        do
+        {
+            if (i == 0) subs = GetStr("Formula: y = k1 * x + b1. Enter the values k1 and b1 separated by a space.");
+            else subs = GetStr("Formula: y = k2 * x + b2. Enter the values k2 and b2 separated by a space.");
+        } while (subs.Length != 2);
+
+        if (!float.TryParse(subs[0], out formula[i]) || !float.TryParse(subs[1], out formula[i + 1])) continue;
+        else i += 2;
+    }
+    return formula;
+}
+
+string[] GetStr(string mes)
+{
+    string str = "";
+    do
+    {
+        Console.WriteLine(mes);
+        str = Console.ReadLine()!;
+    } while (String.IsNullOrWhiteSpace(str));
+    str = str.Trim();
+    return str.Split(' ');
+}
+
 string GetBynaryFromDecimal(int dec)
 {
     result = dec % 2 + result;
